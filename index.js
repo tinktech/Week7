@@ -47,9 +47,9 @@ All questions should be printed to your Browser's console using console.log()
 // 1. Create an array called ages that contains the following values: 3, 9, 23, 64, 2, 8, 28, 93.
 let ages = [3, 9, 23, 64, 2, 8, 28, 93];
 console.log(`Ages array: [${ages}]`);
-// a. Subtract first from last
+// a. Subtract first value from last
 console.log(`First value subtracted from last: ${ages[(ages.length - 1)] - ages[0]}`);
-// b. Add new age
+// b. Add new age, subtract first from last again
 ages.push(38);
 console.log(`Ages array: [${ages}]`);
 console.log(`First value subtracted from last: ${ages[(ages.length - 1)] - ages[0]}`);
@@ -85,3 +85,59 @@ console.log(`Last element of an array can be accessed using: (array.length - 1)`
 console.log(`First element of an array can be accessed using: array[0]`);
 
 // 5. Create a new array called nameLengths. Write a loop to iterate over the previously created names array and add the length of each name to the nameLengths array.
+let nameLengths = [];
+for (let i = 0; i < names.length; i++) {
+    nameLengths.push(names[i].length);
+}
+console.log(`nameLengths array: [${nameLengths}]`);
+
+// 6. Write a loop to iterate over the nameLengths array and calculate the sum of all the elements in the array.
+let nameLengthsSum = 0;
+for (let i = 0; i < nameLengths.length; i++) {
+    nameLengthsSum += nameLengths[i];
+}
+console.log(`Sum of nameLengths elements = ${nameLengthsSum}`);
+
+// 7. Write a function that takes two parameters, word and n, as arguments and returns the word concatenated to itself n number of times.
+let eight = (word, n) => {
+    let eightCon = '';
+    for (let i = 0; i < n; i++){
+        eightCon += (word);
+    }
+    return eightCon;
+}
+console.log(eight('hello', 5));
+
+// 8. Write a function that takes two parameters, firstName and lastName, and returns a full name, separated by a space.
+let fullName = (firstName, lastName) => `${firstName} ${lastName}`;
+console.log(fullName('Tori', 'Daye'));
+
+// 9. Write a function that takes an array of numbers and returns true if the sum of all the numbers in the array is greater than 100.
+let arrayOne = [3, 9, 23, 64, 2, 8, 28, 93];
+let arrayTwo = [3, 9, 23, 64];
+let arrayFun = (array) => {
+    let sum = 0;
+    for (let i = 0; i < array.length; i++) {
+        sum += array[i];
+    }
+    if (sum > 100) {
+        arraySum = 'true';
+    } else {
+        arraySum = 'false';
+    }
+    return arraySum;
+}
+console.log(`arrayOne [${arrayOne}] returns: ${arrayFun(arrayOne)}`);
+console.log(`arrayTwo [${arrayTwo}] returns: ${arrayFun(arrayTwo)}`);
+
+// 10. Write a function that takes an array of numbers and returns the average of all the elements in the array.
+let average = (array) => {
+    let sum = 0;
+    for (let i = 0; i < array.length; i++) {
+        sum += array[i];
+    }
+    return sum / array.length;
+}
+console.log(`The number average for arrayOne [${arrayOne}] is: ${average(arrayOne)}`);
+
+// 11. Write a function that takes two arrays of numbers and returns true if the average of the elements in the first array is greater than the average of the elements in the second array.
