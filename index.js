@@ -1,4 +1,6 @@
 /*
+Week 7: JS4 Coding Assignment
+
 All questions should be printed to your Browser's console using console.log()
 
 1. Create an array called ages that contains the following values: 3, 9, 23, 64, 2, 8, 28, 93.
