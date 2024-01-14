@@ -183,13 +183,13 @@ console.log(``); // console space
 // 12. Write a function called willBuyDrink that takes a boolean isHotOutside, and a number moneyInPocket, and returns true if it is hot outside and if moneyInPocket is greater than 10.50.
 console.log(`12. Write a function called willBuyDrink that takes a boolean isHotOutside, and a number moneyInPocket, and returns true if it is hot outside and if moneyInPocket is greater than 10.50.`);
 let willBuyDrink = (isHotOutside, moneyInPocket) => {
-    let buyIceCream = false;
+    let buyDrink = false;
     if (isHotOutside == true && moneyInPocket > 10.50) {
-        buyIceCream = true;
+        buyDrink = true;
     } else {
-        buyIceCream = false;
+        buyDrink = false;
     }
-    return buyIceCream;
+    return buyDrink;
 }
 console.log(`It is hot, with $11: ${willBuyDrink(true, 11)}`); // prints true
 console.log(`It is not hot, with $11: ${willBuyDrink(false, 11)}`); // prints false
